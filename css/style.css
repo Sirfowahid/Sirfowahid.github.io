@@ -107,7 +107,7 @@ figure {
     margin-bottom: 2em;
     font-size: 12px;
     text-transform: uppercase; }
-  #colorlib-aside #colorlib-logo {
+   #colorlib-logo {
     text-align: right;
     font-weight: 700;
     font-size: 22px;
@@ -124,7 +124,7 @@ figure {
     width: 100%; }
     #colorlib-aside #colorlib-main-menu .collapse {
       display: block !important; }
-    #colorlib-aside #colorlib-main-menu ul {
+     #colorlib-main-menu ul {
       text-align: center;
       margin: 0;
       padding: 0; }
