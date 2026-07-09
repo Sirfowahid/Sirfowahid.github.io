@@ -10,9 +10,38 @@
 // ============================================================
 
 (function () {
-  const REDUCED =
-    window.matchMedia &&
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const mq = (q) => {
+    try { return !!(window.matchMedia && window.matchMedia(q).matches); }
+    catch (e) { return false; }
+  };
+
+  const REDUCED = mq('(prefers-reduced-motion: reduce)');
+
+  // ---- device performance tier detection ----------------------------------
+  //  Decide how heavy the animated glassmorphism background is allowed to be.
+  //  Weak / mobile / data-saver devices get a much lighter treatment so the
+  //  page stays smooth. A `data-perf` flag is exposed on <html> so the CSS
+  //  can trim expensive effects (blur, backdrop-filter, infinite animations)
+  //  to match.
+  const nav = navigator || {};
+  const cores = nav.hardwareConcurrency || 0;      // 0 == unknown
+  const mem = nav.deviceMemory || 0;               // GiB, 0 == unknown
+  const conn = nav.connection || {};
+  const saveData = !!conn.saveData;
+  const slowNet = /(^|\b)(2g|slow-2g|3g)\b/.test(conn.effectiveType || '');
+  const coarse = mq('(hover: none), (pointer: coarse)');
+  const smallScreen = Math.min(window.innerWidth, window.innerHeight) <= 820;
+
+  // Treat as "low power" when any strong weak-device signal is present.
+  const LOW_POWER =
+    saveData ||
+    slowNet ||
+    (cores && cores <= 4) ||
+    (mem && mem <= 4) ||
+    (coarse && smallScreen);
+
+  const perf = REDUCED ? 'reduced' : LOW_POWER ? 'low' : 'high';
+  document.documentElement.setAttribute('data-perf', perf);
 
   // ---- container (replaces any previous canvas of the same id) ----
   let layer = document.getElementById('space-bg');
@@ -28,7 +57,7 @@
   // Shape definitions: color + start position (%) + size (vmax) + depth.
   // A warm gold-leaning palette for a royal / premium ambience.
   // Depth (0 far .. 1 near) drives parallax strength and float distance.
-  const SHAPES = [
+  const ALL_SHAPES = [
     { color: 'var(--accent)',   x: 10, y: 8,  size: 46, depth: 0.3,  dur: 30 }, // gold
     { color: '#C9962E',         x: 84, y: 14, size: 40, depth: 0.55, dur: 34 }, // deep gold
     { color: 'var(--accent-2)', x: 76, y: 80, size: 48, depth: 0.85, dur: 32 }, // teal
@@ -36,6 +65,10 @@
     { color: '#7a5cff',         x: 46, y: 46, size: 34, depth: 0.7,  dur: 29 }, // soft violet
     { color: 'var(--accent-2)', x: 60, y: 22, size: 30, depth: 0.2,  dur: 42 }, // teal
   ];
+
+  // On low-power devices keep only a couple of the largest, calmest shapes;
+  // full-power devices get the whole set.
+  const SHAPES = LOW_POWER ? [ALL_SHAPES[0], ALL_SHAPES[2]] : ALL_SHAPES;
 
   const blobs = SHAPES.map((s, i) => {
     const el = document.createElement('span');
@@ -50,7 +83,9 @@
     return { el, depth: s.depth, sx: 0, sy: 0, tx: 0, ty: 0 };
   });
 
-  if (REDUCED) return; // static shapes, no parallax motion
+  // Static shapes (no scroll/mouse parallax) when motion is reduced or the
+  // device is low-powered — the constant transform work isn't worth the jank.
+  if (REDUCED || LOW_POWER) return;
 
   // ---- gentle scroll + mouse parallax ----
   let pointerX = 0, pointerY = 0;
