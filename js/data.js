@@ -45,7 +45,7 @@ const SITE_DATA = {
     phone: "+880 1732 796 789",
     phoneHref: "tel:+8801732796789",
     cv: "assets/static/Md_Mehedi_Hasan_CV.pdf",
-    photo: "assets/images/profile.jpg",         
+    photo: "assets/images/profile.webp",         
     footerBlurb:
       "Lecturer at SMUCT, AI/ML researcher and software engineer based in Dhaka, Bangladesh. Working at the intersection of deep learning, computer vision and explainable AI.",
     copyright: "© 2026 Md. Mehedi Hasan",
@@ -167,9 +167,9 @@ const SITE_DATA = {
       title: "Peer-reviewed work",
       linkLabel: "All publications →",
       items: [
-        { image: "", tag: "Journal · Q1", tagStyle: "tag-accent", title: "Deep learning for evapotranspiration forecasting & crop water stress", meta: "Journal of Environmental Management, 2025" },
-        { image: "", tag: "Journal · Q1", tagStyle: "tag-accent", title: "ML for predicting strength properties of waste iron slag concrete",   meta: "Heliyon, 2025" },
-        { image: "", tag: "Conference",   tagStyle: "",           title: "Aspect-based sentiment analysis in Bengali text using ML & DL",        meta: "ICCIT, Cox's Bazar, 2023" },
+        { image: "assets/images/journ-thesis.webp", tag: "Journal · Q1", tagStyle: "tag-accent", title: "Deep learning for evapotranspiration forecasting & crop water stress", meta: "Journal of Environmental Management, 2025" },
+        { image: "assets/images/journ heliyon cs 26.webp", tag: "Journal · Q1", tagStyle: "tag-accent", title: "ML for predicting strength properties of waste iron slag concrete",   meta: "Heliyon, 2025" },
+        { image: "assets/images/conf absa ieee.webp", tag: "Conference",   tagStyle: "",           title: "Aspect-based sentiment analysis in Bengali text using ML & DL",        meta: "ICCIT, Cox's Bazar, 2023" },
       ],
     },
 
@@ -225,7 +225,7 @@ const SITE_DATA = {
       title: "Publications",
       lede:
         "Journal articles, conference papers and work currently under peer review, spanning deep learning for environmental and structural engineering, NLP, computer vision, and explainable AI.",
-      status: ["journals: 6", "conference: 1", "under review: 3", "ongoing: 5"],
+      status: ["journals: 7", "conference: 1", "under review: 2", "ongoing: 5"],
       // Optional hero image for THIS page. Leave "" to show the themed
       // medallion instead. Put a file in assets/images and set the path,
       // e.g. heroPhoto: "assets/images/hero-publications.jpg".
@@ -251,6 +251,7 @@ const SITE_DATA = {
           authors: "Rahman, M., <strong>Hasan, M. M.</strong>, Hossain, M. A., Islam, M. M., Das, U. K., Karim, M. R., &amp; Sadiq, S. (2025)",
           venue: "Journal of Environmental Management",
           doi: "https://doi.org/10.1016/j.jenvman.2025.124363",
+          image: "assets/images/journ-thesis.webp",
         },
         {
           tags: "q1", tag: "Q1 · Cite Score 4.5 · IF 3.4", tagStyle: "tag-accent",
@@ -258,6 +259,7 @@ const SITE_DATA = {
           authors: "Raju, M. R., Ahmad, S. I., <strong>Hasan, M. M.</strong>, Hasan, N. M. S., Islam, M. M., Basit, M. A., Hossain, I. T., Santo, S. A., Alam, M. S., &amp; Rahman, M. (2025)",
           venue: "Heliyon, 11(2), e42133",
           doi: "https://doi.org/10.1016/j.heliyon.2025.e42133",
+          image: "assets/images/journ heliyon cs 25.webp",
         },
         {
           tags: "q1", tag: "Q1 · Cite Score 4.5 · IF 3.4", tagStyle: "tag-accent",
@@ -265,6 +267,7 @@ const SITE_DATA = {
           authors: "Raju, M. R., Rahman, M., <strong>Hasan, M. M.</strong>, Islam, M. M., &amp; Alam, M. S. (2023)",
           venue: "Heliyon, 9(11), e22502",
           doi: "https://doi.org/10.1016/j.heliyon.2023.e22502",
+          image: "assets/images/journ heliyon cs 23.webp",
         },
         {
           tags: "q2", tag: "Q2 · Cite Score 4.2 · IF 2.0", tagStyle: "tag-teal",
@@ -272,6 +275,7 @@ const SITE_DATA = {
           authors: "Raju, M. R., Tapu, M. T. P., Ahmed, H., Ahmad, S. I., <strong>Hasan, M. M.</strong>, Alam, M. S., Salauddin, M., Rahman, M. S., &amp; Santo, S. A. (2026)",
           venue: "Engineering Reports, 8(4), e70782",
           doi: "https://doi.org/10.1002/eng2.70782",
+          image: "assets/images/journ eng reports.webp",
         },
         {
           tags: "preprint", tag: "SSRN preprint", tagStyle: "",
@@ -279,6 +283,7 @@ const SITE_DATA = {
           authors: "Rahman, M., <strong>Hasan, M. M.</strong>, Hossain, M. A., Islam, M. M., Das, U. K., Karim, M. R., &amp; Sadiq, S. (2025)",
           venue: "",
           doi: "http://dx.doi.org/10.2139/ssrn.4966439",
+          image: "assets/images/journ ssrn.webp",
         },
         {
           tags: "preprint", tag: "", tagStyle: "",
@@ -286,6 +291,7 @@ const SITE_DATA = {
           authors: "Raju, M. R., Rahman, M., Islam, N. M. S., <strong>Hasan, M. M.</strong>, Sharmily, T., &amp; Hosen, M. S. (2024)",
           venue: "IUBAT Review, 7(1), 90–122",
           doi: "https://doi.org/10.3329/iubatr.v7i1.74329",
+          image: "assets/images/journ iubat.webp",
         },
       ],
     },
@@ -299,6 +305,7 @@ const SITE_DATA = {
           title: "Aspect Based Sentiment Analysis in Bengali Text using Machine Learning and Deep Learning Algorithms",
           authors: "Lamia, S., <strong>Hasan, M. M.</strong>, A. R. M. Kamal, and M. A. Hossain — 2023 26th International Conference on Computer and Information Technology, pp. 1–6",
           doi: "https://doi.org/10.1109/ICCIT60459.2023.10441511",
+          image: "assets/images/conf absa ieee.webp",
         },
       ],
     },
