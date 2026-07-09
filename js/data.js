@@ -168,7 +168,7 @@ const SITE_DATA = {
       linkLabel: "All publications →",
       items: [
         { image: "assets/images/journ-thesis.webp", tag: "Journal · Q1", tagStyle: "tag-accent", title: "Deep learning for evapotranspiration forecasting & crop water stress", meta: "Journal of Environmental Management, 2025" },
-        { image: "assets/images/journ heliyon cs 26.webp", tag: "Journal · Q1", tagStyle: "tag-accent", title: "ML for predicting strength properties of waste iron slag concrete",   meta: "Heliyon, 2025" },
+        { image: "assets/images/journ heliyon cs 25.webp", tag: "Journal · Q1", tagStyle: "tag-accent", title: "ML for predicting strength properties of waste iron slag concrete",   meta: "Heliyon, 2025" },
         { image: "assets/images/conf absa ieee.webp", tag: "Conference",   tagStyle: "",           title: "Aspect-based sentiment analysis in Bengali text using ML & DL",        meta: "ICCIT, Cox's Bazar, 2023" },
       ],
     },
@@ -275,7 +275,7 @@ const SITE_DATA = {
           authors: "Raju, M. R., Tapu, M. T. P., Ahmed, H., Ahmad, S. I., <strong>Hasan, M. M.</strong>, Alam, M. S., Salauddin, M., Rahman, M. S., &amp; Santo, S. A. (2026)",
           venue: "Engineering Reports, 8(4), e70782",
           doi: "https://doi.org/10.1002/eng2.70782",
-          image: "assets/images/journ eng reports.webp",
+          image: "assets/images/journ eng rep 26.webp",
         },
         {
           tags: "preprint", tag: "SSRN preprint", tagStyle: "",
