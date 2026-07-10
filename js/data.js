@@ -179,9 +179,9 @@ const SITE_DATA = {
       title: "Things I've built",
       linkLabel: "All projects →",
       items: [
-        { image: "", tag: "FastAPI · PyTorch",  title: "Brain Stroke Prediction",     text: "Real-time detection with YOLOv11." },
-        { image: "", tag: "MERN · SSLCommerz",  title: "Hotel Reservation System",    text: "Live availability & secure payments." },
-        { image: "", tag: "Flask · OpenCV",     title: "Employee Management System",  text: "Role-based access & automated payroll." },
+        { image: "assets/images/proj brainst.webp", tag: "FastAPI · PyTorch",  title: "Brain Stroke Prediction",     text: "Real-time detection with YOLOv11." },
+        { image: "assets/images/proj ohrms.webp", tag: "MERN · SSLCommerz",  title: "Hotel Reservation System",    text: "Live availability & secure payments." },
+        { image: "assets/images/proj oems.webp", tag: "Flask · OpenCV",     title: "Employee Management System",  text: "Role-based access & automated payroll." },
       ],
     },
 
@@ -192,7 +192,7 @@ const SITE_DATA = {
       // For an animated number, set `counter:true` and use `target`.
       items: [
         { counter: true,  target: "3.84", decimals: 2, suffix: "",  label: "CGPA, BSc CSE, IUBAT" },
-        { counter: true,  target: "6",    decimals: 0, suffix: "+", label: "Journal & conference papers" },
+        { counter: true,  target: "8",    decimals: 0, suffix: "+", label: "Journal & conference papers" },
         { counter: false, value: "Top",  label: "Fresher team, IUPC 2021" },
         { counter: false, value: "2026", label: "Organizer, ML Datathon" },
       ],
@@ -269,6 +269,14 @@ const SITE_DATA = {
           doi: "https://doi.org/10.1016/j.heliyon.2023.e22502",
           image: "assets/images/journ heliyon cs 23.webp",
         },
+         {
+          tags: "q1", tag: "Q1 · Cite Score 4.5 · IF 3.4", tagStyle: "tag-accent",
+          title: "Compound multi-hazard assessment under CMIP6 climate scenarios: Tracking seasonal flood-landslide and drought-fire interactions across Nepal",
+          authors: "Shrestha, K., Duddukunta, K.R., Lal, P., <strong>Hasan, M. M.</strong>, Rahman, M., &amp; Pradhan, N.S. (2026)",
+          venue: "Natural Hazards",
+          doi: "https://doi.org/10.1007/s11069-026-08310-7",
+          image: "assets/images/journ nh 26.webp",
+        },
         {
           tags: "q2", tag: "Q2 · Cite Score 4.2 · IF 2.0", tagStyle: "tag-teal",
           title: "Hybrid NDT–machine learning framework with SHAP-based interpretation for predicting compressive strength of steel slag concrete",
@@ -315,8 +323,7 @@ const SITE_DATA = {
       title: "Submitted, awaiting decision",
       items: [
         { tag: "VRST · CORE Rank A", tagStyle: "tag-teal",  title: "A Comparative Study of Gaze and Physiological Modalities for Cognitive Load Prediction Using Machine Learning and Explainable AI", authors: "<strong>Hasan, M. M.</strong>, Hossain, M. M., Imran, F., Mahmud, M. R." },
-        { tag: "Q1 · Cite Score 4.9 · IF 2.6", tagStyle: "tag-accent", title: "Compound Multi-Hazard Assessment Under CMIP6 Climate Scenarios: Tracking Seasonal Flood-Landslide and Drought-Fire Interactions Across Nepal", authors: "Rahman, M., <strong>Hasan, M. M.</strong> · Journal of Natural Hazards" },
-        { tag: "Q1 · Cite Score 11.6 · IF 9.4", tagStyle: "tag-accent", title: "Novel hybrid GBR-DNN model for predicting the Gravity Grouted Soil Nail Pullout Bond Strength in Weathered Soil", authors: "Won, M., Sadiq, S., <strong>Hasan, M. M.</strong>, Mahfuzur R. · Journal of Rock Mechanics and Geotechnical Engineering" },
+        { tag: "Q1 · CS 11.6 · IF 9.4", tagStyle: "tag-accent", title: "Novel hybrid GBR-DNN model for predicting the Gravity Grouted Soil Nail Pullout Bond Strength in Weathered Soil", authors: "Won, M., Sadiq, S., <strong>Hasan, M. M.</strong>, Mahfuzur R. · Journal of Rock Mechanics and Geotechnical Engineering" },
       ],
     },
 
@@ -352,7 +359,7 @@ const SITE_DATA = {
       badge: "Software Engineer · Feb 2024 – Jul 2025",
       items: [
         {
-          image: "",
+          image: "assets/images/proj ivtrip.webp",
           tags: ["MERN Stack", "Redux", "Tailwind"],
           title: "IV Trip",
           summary: "Travel booking platform for flights, hotels and tours.",
@@ -360,7 +367,7 @@ const SITE_DATA = {
           link: { label: "Visit live site →", href: "https://ivtrip.implevista.com/", style: "btn-solid" },
         },
         {
-          image: "",
+          image: "assets/images/proj ivavatar.webp",
           tags: ["MERN Stack", "Azure", "Redux"],
           title: "IV Avatar",
           summary: "AI avatar platform for automated video generation from scripts.",
@@ -375,21 +382,21 @@ const SITE_DATA = {
       title: "Personal & academic builds",
       items: [
         {
-          image: "", date: "Jun 2024 – Sep 2024",
+          image: "assets/images/proj ohrms.webp", date: "Jun 2024 – Sep 2024",
           title: "Online Hotel Reservation Management System",
           tags: ["MERN", "Redux", "SSLCommerz"],
           bullets: ["Real-time booking with live availability", "Secure multi-gateway payment integration"],
           link: { label: "View on GitHub →", href: "https://github.com/Sirfowahid/Practicum" },
         },
         {
-          image: "", date: "Aug 2023 – Dec 2023",
+          image: "assets/images/proj oems.webp", date: "Aug 2023 – Dec 2023",
           title: "Employee Management System",
           tags: ["Flask", "OpenCV", "PyTorch"],
           bullets: ["Role-based access control for employees", "Automated payroll & attendance tracking"],
           link: { label: "View on GitHub →", href: "https://github.com/Sirfowahid/Employee-Management-System" },
         },
         {
-          image: "", date: "Dec 2024 – Jan 2025",
+          image: "assets/images/proj brainst.webp", date: "Dec 2024 – Jan 2025",
           title: "Brain Stroke Prediction",
           tags: ["FastAPI", "PyTorch", "YOLOv11"],
           bullets: ["Real-time detection for fast, accurate prediction", "Lightweight FastAPI backend for seamless integration"],
@@ -469,9 +476,9 @@ const SITE_DATA = {
       title: "Who can vouch for me",
       // Each reference can have a `photo` (leave "" for placeholder).
       items: [
-        { photo: "assets/images/profile.jpg", name: "Prof. Dr. Utpal Kanti Das", role: "Dean, Professor and Chair", org: "Dept. of CSE, IUBAT", email: "ukd@iubat.edu" },
-        { photo: "assets/images/profile.jpg", name: "Faisal Imran", role: "Associate Professor and Head", org: "Dept. of CSE & CSIT, SMUCT", email: "hod_cse@smuct.ac.bd" },
-        { photo: "assets/images/profile.jpg", name: "Dr. Md. Mahfuzur Rahman", role: "Higher Education Professor", org: "(Postdoctoral Researcher) KFUPM, Saudi Arabia", email: "mfz.rahman@iubat.edu" },
+        { photo: "assets/images/utpal.webp", name: "Prof. Dr. Utpal Kanti Das", role: "Dean, Professor and Chair", org: "Dept. of CSE, IUBAT", email: "ukd@iubat.edu" },
+        { photo: "assets/images/faisal.webp", name: "Faisal Imran", role: "Associate Professor and Head", org: "Dept. of CSE & CSIT, SMUCT", email: "hod_cse@smuct.ac.bd" },
+        { photo: "assets/images/mahfuz.webp", name: "Dr. Md. Mahfuzur Rahman", role: "Higher Education Professor", org: "(Postdoctoral Researcher) KFUPM, Saudi Arabia", email: "mfz.rahman@iubat.edu" },
       ],
     },
   },
